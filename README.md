@@ -42,3 +42,17 @@ npm install @nuxtjs/vuetify --save
 
 
 ```
+
+### Add rack-cors
+```
+$ docker-compose run --rm backend bundle install rack-cors
+$ docker-compose run --rm backend bundle info rack-cors
+```
+
+#### Rebuild backend
+```
+$ docker-compose build backend
+
+# if you encountered permission denied /tmp/db
+$ sudo chmod 755 -R backend/tmp/db
+```
